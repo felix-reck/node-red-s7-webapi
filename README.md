@@ -1,0 +1,2 @@
+Node-RED nodes for interacting with the Siemens S7 Webserver API using JSON-RPC.
+Supports reading and writing PLC variables, browsing program structures, bulk requests, and basic PLC services (time, status).
