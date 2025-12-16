@@ -18,7 +18,7 @@
   "node-red": {
     "version": ">=3.0.0",
     "nodes": {
-      "s7-webapi-client": "lib/s7-webapi-client.js",
+      "s7-webapi": "lib/s7-webapi-node.js",
       "s7-webapi-server": "config/s7-webapi-server.js"
     }
   },

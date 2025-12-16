@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    function mipServerNode(n) {
+    function s7webApiServerNode(n) {
         RED.nodes.createNode(this,n);
      
         this.name = n.name;
@@ -9,7 +9,7 @@ module.exports = function(RED) {
         this.sslVerify = n.sslVerify
         
     }
-    RED.nodes.registerType('s7-webapi-server',mipServerNode,{
+    RED.nodes.registerType('s7-webapi-server',s7webApiServerNode,{
         credentials: {
             password: {type:'password'}
         }

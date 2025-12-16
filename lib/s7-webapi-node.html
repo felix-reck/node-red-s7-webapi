@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('s7-webapi', {
+        category: 'network',
+        color: '#E3ECDF',
+        defaults: {
+            name: { value: '' },
+            service: { value: '' },
+            server: { value: '', type: 's7-webapi-server' },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: 'font-awesome/fa-globe',
+        paletteLabel: 's7-webapi',
+        label: function () {
+            return this.name || this.service || 's7-webapi node';
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="s7-webapi">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-link"></i> Server</label>
+        <input type="text" id="node-input-server">
+    </div>
+
+
+<div class="form-row">
+    <label for="node-input-service"><i class="fa fa-cogs"></i> Service</label>
+    <input type="text" id="node-input-service" placeholder="service">
+</div>
+
+</script>
+
+<script type="text/html" data-help-name="s7-webapi">
+</script>
