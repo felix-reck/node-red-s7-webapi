@@ -1,0 +1,28 @@
+{
+  "name": "@felix-reck/node-red-s7-webapi",
+  "version": "0.1.0",
+  "description": "A custom Node-RED node to interact S7 WebApi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felix-reck/node-red-s7-webapi.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Felix Reck",
+  "dependencies": {
+    "axios": "^1.7.3"
+  },
+  "keywords": [
+    "node-red",
+    "s7"
+  ],
+  "node-red": {
+    "version": ">=3.0.0",
+    "nodes": {
+      "s7-webapi-client": "lib/s7-webapi-client.js",
+      "s7-webapi-server": "config/s7-webapi-server.js"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
