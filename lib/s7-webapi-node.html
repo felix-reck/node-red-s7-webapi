@@ -4,7 +4,7 @@
         color: '#E3ECDF',
         defaults: {
             name: { value: '' },
-            service: { value: '' },
+            method: { value: '' },
             server: { value: '', type: 's7-webapi-server' },
         },
         inputs: 1,
@@ -12,29 +12,59 @@
         icon: 'font-awesome/fa-globe',
         paletteLabel: 's7-webapi',
         label: function () {
-            return this.name || this.service || 's7-webapi node';
+            return this.name || this.method || 's7-webapi node';
         }
     });
 </script>
 
+
 <script type="text/html" data-template-name="s7-webapi">
+
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <label for="node-input-name">
+            <i class="fa fa-tag"></i> Name
+        </label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 
     <div class="form-row">
-        <label for="node-input-server"><i class="fa fa-link"></i> Server</label>
+        <label for="node-input-server">
+            <i class="fa fa-link"></i> Server
+        </label>
         <input type="text" id="node-input-server">
     </div>
 
+    <div class="form-row">
+        <label for="node-input-method">
+            <i class="fa fa-cogs"></i> method
+        </label>
+        <select id="node-input-method">
+            <option value="">-- select method --</option>
+            <option value="DefinedByPayload">-- select from payload --</option>
 
-<div class="form-row">
-    <label for="node-input-service"><i class="fa fa-cogs"></i> Service</label>
-    <input type="text" id="node-input-service" placeholder="service">
-</div>
+            <!-- API -->
+            <option value="Api.Ping">Api.Ping</option>
+            <option value="Api.Version">Api.Version</option>
 
-</script>
+            <!-- PLC -->
+            <option value="Plc.ReadSystemTime">Plc.ReadSystemTime</option>
+            <option value="Plc.ReadCpuType">Plc.ReadCpuType</option>
+            <option value="Plc.ReadOperatingMode">Plc.ReadOperatingMode</option>
+            <option value="Plc.ReadStationName">Plc.ReadStationName</option>
 
-<script type="text/html" data-help-name="s7-webapi">
+            <!-- Program -->
+            <option value="PlcProgram.Read">PlcProgram.Read</option>
+            <option value="PlcProgram.Write">PlcProgram.Write</option>
+
+            <!-- Diagnostics -->
+            <!--option value="DiagnosticBuffer.Browse">DiagnosticBuffer.Browse</option-->
+            <!-- <option value="Alarms.Browse">Alarms.Browse</option> -->
+            <!--  <option value="Alarms.Acknowledge">Alarms.Acknowledge</option> -->
+
+            <!-- Files -->
+            <!--option value="Files.Browse">Files.Browse</option-->
+            <!--option value="Files.Download">Files.Download</option-->
+        </select>
+    </div>
+
 </script>
