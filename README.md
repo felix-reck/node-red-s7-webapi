@@ -1,2 +1,5 @@
-Node-RED nodes for interacting with the Siemens S7 Webserver API using JSON-RPC.
-Supports reading and writing PLC variables, browsing program structures, bulk requests, and basic PLC services (time, status).
+# node-red-contrib-s7-webapi
+A minimal Node-RED node for accessing the Siemens S7 Web API via JSON-RPC.
+This node provides an additional access path to S7-1200 / S7-1500 controllers using HTTP(S).
+It focuses on transport, authentication and flexibility.
+
